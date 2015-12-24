@@ -1,0 +1,36 @@
+[ 2015-09-07T15:32:34+08:00 ] 127.0.0.1 /index.php/Home/Index/index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0029s ]
+SQL: INSERT INTO `blog` (`title`,`content`) VALUES ('tao','wangtao'),('tao2','wangtao') [ RunTime:0.0114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018139s ]
+
+[ 2015-09-07T15:33:06+08:00 ] 127.0.0.1 /index.php/Home/Index/index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0024s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'tao' for key 'PRIMARY'
+
+[ 2015-09-07T15:33:23+08:00 ] 127.0.0.1 /index.php/Home/Index/index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0024s ]
+SQL: INSERT INTO `blog` (`title`,`content`,`date`) VALUES ('tao3','wangtao','aaa'),('tao4','wangtao','aaa') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
